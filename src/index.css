@@ -1,0 +1,234 @@
+:root {
+  --Purple: hsl(300, 100%, 25%);
+  --Cyan: hsl(180, 100%, 50%);
+  --Gray: hsl(0, 0%, 50%);
+  --White: hsl(0, 0%, 100%);
+  --Font-Family-Pr: Arial, Helvetica, sans-serif;
+  --Font-Family-Sc: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Font-Family-Pr);
+}
+button {
+  border: none;
+  display: block;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.body__wrapper {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, var(--Purple), var(--Cyan));
+}
+
+/*
+ ---------------
+ HEADER - STARTS - HEADER
+ ---------------
+ */
+.header__container {
+  border-radius: 0.3rem 0.3rem 0 0;
+  background-color: rgb(243, 243, 243);
+  border-bottom: 2px solid var(--Gray);
+}
+.header__date {
+  padding: 0.5rem;
+  display: block;
+  text-align: end;
+  font-family: var(--Font-Family-Sc);
+  font-weight: 400;
+}
+.header__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+  margin: auto;
+}
+.header__title {
+  color: var(--Purple);
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.header__title {
+  text-align: center;
+  max-width: fit-content;
+  border-radius: -1rem;
+  position: relative;
+}
+.header__period {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__greetings {
+  text-align: center;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-family: var(--Font-Family-Sc);
+}
+
+.header__clock {
+  max-width: fit-content;
+  color: var(--White);
+  background-color: var(--Gray);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--White);
+}
+
+/*
+ ----------------------
+ HEADER - ENDS - HEADER
+ ----------------------
+*/
+
+/*
+ ---------------------
+ MAIN - STARTS - MAIN
+ ---------------------
+*/
+
+.ToDo {
+  min-width: 350px;
+  padding: 1rem 0.5rem;
+  min-height: 300px;
+  background: rgb(240, 240, 240);
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ToDo__form {
+  width: 100%;
+  display: flex;
+  margin: 0.5rem 0 1rem;
+}
+.ToDo__input--form {
+  padding: 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+}
+.ToDo__button--wrapper,
+.ToDo__edit--wrapper {
+  height: 2.5rem;
+  padding: 0 3px;
+  display: flex;
+  background: linear-gradient(to right, var(--Cyan), var(--Purple));
+  border-radius: 0.5rem;
+}
+.ToDo__button--form,
+.ToDo__edit {
+  background-color: var(--White);
+  padding: 0 1rem;
+  height: 2.2rem;
+  margin: auto;
+  font-weight: 600;
+}
+.ToDo__filters {
+  display: flex;
+  align-items: center;
+}
+fieldset {
+  border: none;
+}
+.ToDo__filter {
+  opacity: 0;
+}
+.ToDo__label--active {
+  text-underline-offset: 3px;
+  text-decoration: underline;
+  text-decoration-color: var(--Purple);
+}
+.ToDo__menu {
+  position: relative;
+}
+.ToDo__ellipsis {
+  background: none;
+  width: fit-content;
+}
+.ToDo__clears {
+  background-color: var(--White);
+  padding: 0.5rem 1rem;
+  top: 140%;
+  border-radius: 0.5rem;
+  left: -200%;
+  position: absolute;
+  z-index: 4;
+}
+.ToDo__clear {
+  width: 5rem;
+  height: 3rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem auto;
+  background-color: transparent;
+  background-color: var(--Purple);
+  color: var(--White);
+}
+.ToDo__input--item {
+  width: 70%;
+  height: 2.2rem;
+  border-radius: 0.3rem;
+  padding: 0.25rem 0.5rem;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border: 1px solid var(--Gray);
+}
+.ToDo__item--actives,
+.ToDo__item--completed {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.ToDo__item--completed {
+  opacity: 0.5;
+}
+.ToDo__toggle {
+  background-color: var(--White);
+  outline: 2px solid var(--Purple);
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.ToDo__edit {
+  width: 2.5rem;
+  padding: 0;
+}
+.ToDo__remove {
+  width: fit-content;
+}
